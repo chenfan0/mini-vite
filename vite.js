@@ -189,5 +189,5 @@ function start(str) {
 }
 
 server.listen(8000, () => {
-  console.log("vite server in localhost:8080");
+  console.log("vite server in localhost:8000");
 });
