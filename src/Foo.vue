@@ -1,9 +1,9 @@
 <template>
-  <div class="">Foo</div>
+  <div class="">Foo {{ count }}</div>
 </template>
-<!-- <script setup>
+<script setup>
 import { ref } from "vue";
 const count = ref(0);
-</script> -->
+</script>
 
 <style lang="less" scoped></style>

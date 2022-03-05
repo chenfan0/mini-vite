@@ -1,3 +1,3 @@
 # mini-vite
 1. npm install
-2. node vite.js
+2. npm run serve

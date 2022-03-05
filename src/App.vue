@@ -1,14 +1,14 @@
 <script>
 import { ref } from "vue";
 import Foo from "./Foo.vue";
-import Bar from './Bar.vue'
+import Bar from "./Bar.vue";
 export default {
   components: {
     Foo,
-    Bar
+    Bar,
   },
   setup() {
-    const count = ref(12);
+    const count = ref(123);
     const add = () => {
       count.value++;
     };

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="/client.js"></script>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,29 +9,6 @@
   </head>
   <body>
     <div id="app"></div>
-    <script>
-      const process = {
-        env: {
-          NODE_ENV: "development",
-        },
-      };
-      const __VUE_OPTIONS_API__ = false;
-      const __VUE_PROD_DEVTOOLS__ = true;
-      let time = null;
-      window.onload = function () {
-        const ws = new WebSocket("ws://localhost:8000");
-        ws.onopen = function () {};
-        ws.onerror = function () {
-          console.log("error");
-        };
-        ws.onmessage = function (msg) {
-          console.log(msg.data);
-          if (msg.data === "reload") {
-            window.location.reload();
-          }
-        };
-      };
-    </script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
