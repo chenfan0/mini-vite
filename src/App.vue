@@ -1,17 +1,29 @@
-<script setup>
+<script>
 import { ref } from "vue";
-const count = ref(110);
+import Foo from "./components/Foo.vue";
+export default {
+  components: {
+    Foo,
+  },
+  setup() {
+    const count = ref(110);
 
-function add() {
-  count.value++;
-}
+    function add() {
+      count.value++;
+    }
+    return {
+      count,
+      add,
+    };
+  },
+};
 </script>
 
 <template>
   <h1>hello vite {{ count }}</h1>
   <button @click="add">+</button>
-  <!-- <Foo />
-  <Bar /> -->
+  <Foo />
+  <!-- <Bar /> -->
 </template>
 
 <style scoped>
