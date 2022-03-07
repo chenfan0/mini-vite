@@ -1,3 +1,11 @@
+<template>
+  <div class="app">
+    <h1>hello mini-vite</h1>
+    <button @click="add">{{ count }}</button>
+    <Foo />
+  </div>
+</template>
+
 <script>
 import { ref } from "vue";
 import Foo from "./components/Foo.vue";
@@ -6,7 +14,7 @@ export default {
     Foo,
   },
   setup() {
-    const count = ref(110);
+    const count = ref(0);
 
     function add() {
       count.value++;
@@ -19,15 +27,17 @@ export default {
 };
 </script>
 
-<template>
-  <h1>hello vite {{ count }}</h1>
-  <button @click="add">+</button>
-  <Foo />
-  <!-- <Bar /> -->
-</template>
-
 <style scoped>
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
 h1 {
-  color: red;
+  color: pink;
 }
 </style>
